@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.learning-to-code {
+  box-sizing: border-box;
+  background-color: rgb(236, 255, 255);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 1px grey;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 25rem;
+  height: auto;
+}
+.learning-to-code h1 {
+  margin-top: 0;
+}
+.learning-to-code p {
+  margin-bottom: 0;
+}
+
+.random-button__container {
+  box-sizing: border-box;
+  background-color: rgb(236, 255, 255);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 1px grey;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 15rem;
+  height: auto;
+}
+.random-button__container h1 {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

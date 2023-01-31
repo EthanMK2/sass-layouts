@@ -1,0 +1,12 @@
+// resets, variables, mixins, and any utility classes
+
+@mixin teal-container() {
+    box-sizing: border-box;
+    background-color: rgb(236, 255, 255);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 1px grey;
+    padding: 1rem;
+    margin: 1rem;
+    @content; // put width and height here
+}
