@@ -1,3 +1,40 @@
-// anything reusable, buttons, navbars, cards, 
+// anything reusable, buttons, navbars, cards,
 
+@use "base" as *;
 
+.bottom-container-button {
+  text-align: center;
+  border-top-width: 1px;
+  border-top-color: rgb(196, 196, 196);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-bottom-left-radius: $standard-radius;
+  border-bottom-right-radius: $standard-radius;
+  width: 100%;
+  height: 2.7rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: map-get($colors, container);
+  transition: background-color 200ms;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(128, 128, 128);
+
+  &:hover {
+    background-color: rgb(236, 236, 236);
+  }
+}
+
+.round-image-div {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.round-image {
+  width: 100%;
+}
