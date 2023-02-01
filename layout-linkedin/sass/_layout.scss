@@ -1,0 +1,60 @@
+// containers, grid systems, flex box, header, footer, sidebar, forms
+
+@use "base" as *;
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: map-get($colors, main-background);
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}
+
+.main-section {
+  grid-area: main-section;
+
+  .profile-summary {
+    @include primary-container() {
+      margin-top: 0.5rem;
+      width: 100%;
+      height: 20rem;
+    }
+  }
+}
+
+.extras {
+  grid-area: extras;
+
+  .extras__item {
+    @include primary-container() {
+      margin-top: 0.5rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "main-section extras";
+    gap: 0.8rem;
+    max-width: 1000px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,16 @@
+// resets, variables, mixins, and any utility classes
+$colors: (
+  main-background: rgb(234, 234, 234),
+  container: white,
+  primary: rgb(56, 56, 255),
+  secondary: rgb(37, 178, 37),
+);
+
+@mixin primary-container() {
+  box-sizing: border-box;
+  background-color: map-get($colors, container);
+  border-radius: 8px;
+  box-shadow: 0 0px 2px 0.1px grey;
+  padding: 1rem;
+  @content; // put width and height, and others here
+}

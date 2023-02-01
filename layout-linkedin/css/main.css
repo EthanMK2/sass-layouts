@@ -1,0 +1,61 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(234, 234, 234);
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}
+
+.main-section {
+  grid-area: main-section;
+}
+.main-section .profile-summary {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0px 2px 0.1px grey;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 20rem;
+}
+
+.extras {
+  grid-area: extras;
+}
+.extras .extras__item {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0px 2px 0.1px grey;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "main-section extras";
+    gap: 0.8rem;
+    max-width: 1000px;
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .main {
+    gap: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
