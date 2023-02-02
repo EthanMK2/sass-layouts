@@ -34,6 +34,28 @@
   width: 100%;
 }
 
+.subcontent__title {
+  font-weight: bold;
+  margin: 0.1rem 0;
+}
+
+.subcontent__subtitle {
+  font-size: 0.8rem;
+  color: rgb(128, 128, 128);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.subcontent__detail {
+  font-size: 0.85rem;
+  margin: 0.1rem 0 1rem 0;
+}
+
+.oval-button {
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  width: fit-content;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -49,10 +71,24 @@ body {
   background-color: rgb(241, 241, 241);
   box-sizing: border-box;
   padding: 0 1.5rem;
+  padding-top: 4rem;
+}
+
+.container {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0px 2px 0.05px grey;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  position: relative;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: fit-content;
+  min-height: 8rem;
 }
 
 .container-title {
-  margin: 1rem 0 0.2rem 0.5rem;
+  margin: 1rem 0 1rem 0;
   padding: 0;
   font-size: 1.2rem;
 }
@@ -65,12 +101,15 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0px 2px 0.05px grey;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
   position: relative;
   margin-top: 0.5rem;
   width: 100%;
   height: fit-content;
   min-height: 8rem;
+}
+.main-section .profile-summary .container-title {
+  margin-bottom: 0rem;
 }
 .main-section .profile-summary .round-image-div {
   margin-top: 4rem;
@@ -90,6 +129,14 @@ body {
   background-size: cover;
   z-index: 0;
 }
+.main-section .profile-summary .headline {
+  font-size: 0.95rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.main-section .subcontent__subtitle {
+  margin: 0.5rem 0;
+}
 
 .extras {
   grid-area: extras;
@@ -99,14 +146,14 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0px 2px 0.05px grey;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
   position: relative;
   margin-top: 0.5rem;
   width: 100%;
   height: auto;
 }
 .extras .extras__item .container-title {
-  margin: 1rem 0 1rem 0.5rem;
+  margin: 1rem 0 1rem 0;
 }
 
 @media (min-width: 768px) {

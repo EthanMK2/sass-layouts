@@ -38,3 +38,28 @@
 .round-image {
   width: 100%;
 }
+
+.subcontent {
+}
+
+.subcontent__title {
+  font-weight: bold;
+  margin: 0.1rem 0;
+}
+
+.subcontent__subtitle {
+  font-size: 0.8rem;
+  color: rgb(128, 128, 128);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.subcontent__detail {
+  font-size: 0.85rem;
+  margin: 0.1rem 0 1rem 0;
+}
+
+.oval-button {
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  width: fit-content;
+}
