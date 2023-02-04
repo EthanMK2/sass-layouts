@@ -2,6 +2,52 @@
 
 @use "base" as *;
 
+.main-nav {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  padding: 0.5rem;
+  z-index: 100;
+
+  .nav-container {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    max-width: $main-width;
+    justify-content: center;
+    align-items: center;
+
+    .main-nav__logo {
+      width: 36px;
+      margin: 0 0.5rem;
+    }
+
+    .searchbar {
+      height: fit-content;
+      padding: 0.5rem 0.2rem 0.5rem 2rem;
+      background-color: darken(map-get($colors, main-background), $amount: 1%);
+      border: none;
+      margin-right: auto;
+      width: 15rem;
+    }
+
+    .main-nav__link {
+      margin: 0.25rem 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color:rgb(128, 128, 128);
+      cursor: pointer;
+
+      &:hover {
+        color:black;
+      }
+    }
+  }
+}
+
 .bottom-container-button {
   text-align: center;
   border-top-width: 1px;
@@ -39,8 +85,8 @@
   width: 100%;
 }
 
-.subcontent {
-}
+// .subcontent {
+// }
 
 .subcontent__title {
   font-weight: bold;
@@ -51,6 +97,7 @@
   font-size: 0.8rem;
   color: rgb(128, 128, 128);
   margin: 0.5rem 0 1rem 0;
+  width: fit-content;
 }
 
 .subcontent__detail {
@@ -58,8 +105,81 @@
   margin: 0.1rem 0 1rem 0;
 }
 
-.oval-button {
-  padding: 0.5rem 1rem;
-  border-radius: 3rem;
-  width: fit-content;
+.button-blue {
+  @include oval-button() {
+    border: none;
+    background-color: map-get($colors, primary);
+    color: white;
+    font-weight: 700;
+    transition: background-color 200ms;
+  }
+
+  &:hover,
+  &:active {
+    background-color: darken(map-get($colors, primary), $amount: 15%);
+  }
+}
+
+.button-blue-hollow {
+  @include oval-button() {
+    color: map-get($colors, primary);
+    font-weight: 700;
+    border-width: 1px;
+    border-color: map-get($colors, primary);
+    background-color: white;
+    transition: all 200ms;
+    box-sizing: content-box;
+  }
+
+  &:hover,
+  &:active {
+    background-color: lighten(map-get($colors, primary), $amount: 50%);
+  }
+}
+
+.button-gray {
+  @include oval-button() {
+    border-width: 1px;
+    border-color: rgb(128, 128, 128);
+    background-color: white;
+    color: rgb(128, 128, 128);
+    font-weight: 700;
+    transition: all 200ms;
+  }
+
+  &:hover,
+  &:active {
+    background-color: lighten(black, $amount: 90%);
+  }
+}
+
+.blue-link {
+  color: lighten(map-get($colors, primary), $amount: 5%);
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container-item {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin: 0.5rem 0;
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+  }
+
+  .subcontent__detail {
+    margin-bottom: 0;
+  }
+
+  .subcontent__subtitle {
+    margin-top: 0;
+  }
 }

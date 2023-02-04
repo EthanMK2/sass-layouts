@@ -1,3 +1,44 @@
+.main-nav {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  padding: 0.5rem;
+  z-index: 100;
+}
+.main-nav .nav-container {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  max-width: 1140px;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav .nav-container .main-nav__logo {
+  width: 36px;
+  margin: 0 0.5rem;
+}
+.main-nav .nav-container .searchbar {
+  height: fit-content;
+  padding: 0.5rem 0.2rem 0.5rem 2rem;
+  background-color: #eeeeee;
+  border: none;
+  margin-right: auto;
+  width: 15rem;
+}
+.main-nav .nav-container .main-nav__link {
+  margin: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgb(128, 128, 128);
+  cursor: pointer;
+}
+.main-nav .nav-container .main-nav__link:hover {
+  color: black;
+}
+
 .bottom-container-button {
   text-align: center;
   border-top-width: 1px;
@@ -43,6 +84,7 @@
   font-size: 0.8rem;
   color: rgb(128, 128, 128);
   margin: 0.5rem 0 1rem 0;
+  width: fit-content;
 }
 
 .subcontent__detail {
@@ -50,10 +92,79 @@
   margin: 0.1rem 0 1rem 0;
 }
 
-.oval-button {
+.button-blue {
   padding: 0.5rem 1rem;
   border-radius: 3rem;
   width: fit-content;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(10, 102, 194);
+  color: white;
+  font-weight: 700;
+  transition: background-color 200ms;
+}
+.button-blue:hover, .button-blue:active {
+  background-color: #064079;
+}
+
+.button-blue-hollow {
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  width: fit-content;
+  cursor: pointer;
+  color: rgb(10, 102, 194);
+  font-weight: 700;
+  border-width: 1px;
+  border-color: rgb(10, 102, 194);
+  background-color: white;
+  transition: all 200ms;
+  box-sizing: content-box;
+}
+.button-blue-hollow:hover, .button-blue-hollow:active {
+  background-color: #cfe6fd;
+}
+
+.button-gray {
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  width: fit-content;
+  cursor: pointer;
+  border-width: 1px;
+  border-color: rgb(128, 128, 128);
+  background-color: white;
+  color: rgb(128, 128, 128);
+  font-weight: 700;
+  transition: all 200ms;
+}
+.button-gray:hover, .button-gray:active {
+  background-color: #e6e6e6;
+}
+
+.blue-link {
+  color: #0b73da;
+  font-weight: 700;
+  cursor: pointer;
+}
+.blue-link:hover {
+  text-decoration: underline;
+}
+
+.container-item {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin: 0.5rem 0;
+}
+.container-item img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+.container-item .subcontent__detail {
+  margin-bottom: 0;
+}
+.container-item .subcontent__subtitle {
+  margin-top: 0;
 }
 
 html {
@@ -79,16 +190,29 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0px 2px 0.05px grey;
-  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  padding: 1rem 1.5rem 2rem 1.5rem;
   position: relative;
   margin-top: 0.5rem;
   width: 100%;
   height: fit-content;
   min-height: 8rem;
 }
+.container .activity-title {
+  margin-bottom: 0;
+}
+.container .activity-followers {
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+.container .content-divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgb(236, 236, 236);
+  margin: 0.5rem 0;
+}
 
 .container-title {
-  margin: 1rem 0 1rem 0;
+  margin: 0.5rem 0 1rem 0;
   padding: 0;
   font-size: 1.2rem;
 }
@@ -101,7 +225,7 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0px 2px 0.05px grey;
-  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  padding: 1rem 1.5rem 2rem 1.5rem;
   position: relative;
   margin-top: 0.5rem;
   width: 100%;
@@ -114,7 +238,6 @@ body {
 .main-section .profile-summary .round-image-div {
   margin-top: 4rem;
   position: relative;
-  z-index: 1;
 }
 .main-section .profile-summary .background-image-div {
   position: absolute;
@@ -127,7 +250,6 @@ body {
   height: 12.5rem;
   background-image: url("../img/backgroundLinkedinPic.jpeg");
   background-size: cover;
-  z-index: 0;
 }
 .main-section .profile-summary .headline {
   font-size: 0.95rem;
@@ -136,6 +258,15 @@ body {
 }
 .main-section .subcontent__subtitle {
   margin: 0.5rem 0;
+}
+.main-section .intro-association {
+  display: none;
+}
+.main-section #activity-follow-button {
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
 }
 
 .extras {
@@ -146,7 +277,7 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0px 2px 0.05px grey;
-  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  padding: 1rem 1.5rem 2rem 1.5rem;
   position: relative;
   margin-top: 0.5rem;
   width: 100%;
@@ -166,11 +297,36 @@ body {
     gap: 0.8rem;
     max-width: 1140px;
     height: 100%;
+    position: static;
+    z-index: -1;
   }
 }
 @media (min-width: 992px) {
   .main {
     gap: 1.5rem;
+    position: static;
+    z-index: -1;
+  }
+  .intro-association {
+    display: flex !important;
+    flex-direction: row;
+    position: absolute;
+    width: 15rem;
+    right: 0;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  .intro-association:hover {
+    color: #0b73da;
+    text-decoration: underline;
+  }
+  .intro-association img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+  .intro-association p {
+    font-weight: 700;
   }
 }
 
