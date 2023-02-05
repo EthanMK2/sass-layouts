@@ -3,7 +3,7 @@
 @use "base" as *;
 
 html {
-  height: 100%;
+  height: fit-content;
   width: 100%;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
@@ -115,6 +115,47 @@ body {
   }
 }
 
+.footer-title {
+  color: map-get($colors, primary);
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  max-width: $main-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  .footer-logo {
+    color: white;
+    background-color: map-get($colors, primary);
+    border-radius: 3px;
+    height: fit-content;
+  }
+}
+
+.footer-box {
+  height: fit-content;
+  max-width: $main-width;
+  margin: 1rem auto 1rem auto;
+  display: flex;
+  flex-direction: column;
+
+  .footer-container {
+    .footer-link {
+      display: block;
+      color: gray;
+      font-weight: 500;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+
+      &:hover,
+      &:active {
+        color: lighten(map-get($colors, primary), $amount: 5%);
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .main {
     margin: 0 auto;
@@ -127,6 +168,13 @@ body {
     height: 100%;
     position: static;
     z-index: -1;
+  }
+
+  .footer-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
