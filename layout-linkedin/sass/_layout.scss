@@ -16,7 +16,11 @@ body {
   width: 100%;
   background-color: map-get($colors, main-background);
   box-sizing: border-box;
-  padding-top: 4rem;
+  padding-top: 0rem;
+}
+
+.main {
+  margin-top: 1rem;
 }
 
 .container {
@@ -189,35 +193,36 @@ body {
 }
 
 @media (min-width: 992px) {
-
   .main {
     gap: 1.5rem;
     position: static;
     z-index: -1;
   }
 
-  .intro-association {
-    display: flex !important;
-    flex-direction: row;
-    position: absolute;
-    width: 15rem;
-    right: 0;
-    margin-top: 1rem;
-    cursor: pointer;
+  .main-section {
+    .intro-association {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      width: 15rem;
+      right: 0;
+      margin-top: 1rem;
+      cursor: pointer;
 
-    &:hover {
-      color: lighten(map-get($colors, primary), $amount: 5%);
-      text-decoration: underline;
-    }
+      &:hover {
+        color: lighten(map-get($colors, primary), $amount: 5%);
+        text-decoration: underline;
+      }
 
-    img {
-      width: 2rem;
-      height: 2rem;
-      margin-right: 0.5rem;
-    }
+      img {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.5rem;
+      }
 
-    p {
-      font-weight: 700;
+      p {
+        font-weight: 700;
+      }
     }
   }
 }

@@ -4,7 +4,6 @@
 
 .main-nav {
   box-sizing: border-box;
-  position: fixed;
   top: 0;
   left: 0;
   background-color: white;
@@ -16,6 +15,7 @@
     margin: auto;
     text-align: center;
     display: flex;
+    flex-direction: column;
     max-width: $main-width;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@
       padding: 0.5rem 0.2rem 0.5rem 2rem;
       background-color: darken(map-get($colors, main-background), $amount: 1%);
       border: none;
-      margin-right: auto;
+      margin: 0 auto;
       width: 15rem;
     }
 
@@ -188,5 +188,21 @@
 
   .subcontent__subtitle {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    position: fixed;
+
+    .nav-container {
+      display: flex;
+      flex-direction: row;
+
+      .searchbar {
+        margin-right: auto;
+        margin-left: 0;
+      }
+    }
   }
 }
