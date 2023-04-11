@@ -1,2 +1,2 @@
 # sass-layouts
-Layouts I made with SASS/SCSS
+Layouts I made with SASS/SCSS. 
