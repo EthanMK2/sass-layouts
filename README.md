@@ -1,2 +1,2 @@
 # sass-layouts
-Layouts I made with SASS/SCSS. 
+Websites I made focusing on CSS, UI/UX, and SASS/SCSS. 
